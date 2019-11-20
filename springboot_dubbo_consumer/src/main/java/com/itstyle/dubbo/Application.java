@@ -21,7 +21,7 @@ public class Application  {
 	private static final Logger logger = Logger.getLogger(Application.class);
 	@Reference
 	private IUserService userService;
-	@RequestMapping("/")
+	@RequestMapping("/greeting")
 	@ResponseBody
     public String   greeting() {
 		User user = new User("张三", 19);
