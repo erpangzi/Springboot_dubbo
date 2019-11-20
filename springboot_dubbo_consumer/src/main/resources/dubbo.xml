@@ -9,7 +9,7 @@
     <dubbo:application name="springBoot_dubbo_consumer"/>
 
     <!-- 注册中心服务地址 -->
-    <dubbo:registry  protocol="zookeeper" address="${dubbo.registry.address}" />
+    <dubbo:registry  protocol="zookeeper" address="${dubbo.registry.address}" check="false" />
     <!-- 
 	           消费者配置 10秒重试默认retries="2" 3次调用 -同步返回-启动不检查提供者
 	 -->

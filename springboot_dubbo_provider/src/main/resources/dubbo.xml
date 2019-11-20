@@ -9,12 +9,12 @@
     <dubbo:application name="springBoot_dubbo_provider"/>
 
     <!-- 注册中心服务地址 -->
-    <dubbo:registry  protocol="zookeeper" address="${dubbo.registry.address}"/>
+    <dubbo:registry  protocol="zookeeper" address="${dubbo.registry.address}" check="false"/>
 
     <!-- 用dubbo协议-->
     <dubbo:protocol name="dubbo" port="-1" dispather="all"/>
     
-    <dubbo:provider timeout="10000"  threads="10" threadpool="fixed"   loadbalance="roundrobin"/>
+    <dubbo:provider timeout="10000"  threads="10" threadpool="fixed"   loadbalance="roundrobin" />
     
     <!-- 使用注解方式 -->
     <dubbo:annotation package="com.itstyle.dubbo"/>
