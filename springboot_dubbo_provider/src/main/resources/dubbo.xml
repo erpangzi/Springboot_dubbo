@@ -16,7 +16,15 @@
     
     <dubbo:provider timeout="10000"  threads="10" threadpool="fixed"   loadbalance="roundrobin"/>
     
-    <!-- 使用注解方式-->     
+    <!-- 使用注解方式 -->
     <dubbo:annotation package="com.itstyle.dubbo"/>
+
+
+<!--    <dubbo:application name="provider" />
+    <dubbo:registry address="zookeeper://127.0.0.1:2181" />
+    <dubbo:protocol name="dubbo" port="29014" />
+    <dubbo:service interface="com.itstyle.dubbo.service.IUserService" ref="IUserService" />
+    <bean id="IUserService" class="com.itstyle.dubbo.service.impl.UserServiceImpl" />-->
+
 
 </beans>
